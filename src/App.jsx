@@ -31,7 +31,8 @@ const App = () => {
   };
 
   const downloadQR = () => {
-    console.log("Download QR");
+    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${url}`;
+    window.open(qrUrl, "_blank")
   }
   return (
     <div className="w-full h-screen flex flex-col items-center justify-center gap-8">
