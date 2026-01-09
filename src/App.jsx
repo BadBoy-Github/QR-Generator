@@ -29,8 +29,12 @@ const App = () => {
       setInputCorrect(false);
     }
   };
+
+  const downloadQR = () => {
+    console.log("Download QR");
+  }
   return (
-    <div className="w-full h-[100vh] flex flex-col items-center justify-center gap-8">
+    <div className="w-full h-screen flex flex-col items-center justify-center gap-8">
       <div className="flex items-center gap-6">
         {inputCorrect ? (
           ""
@@ -60,7 +64,7 @@ const App = () => {
           className="w-44 h-44"
         />
       </div>
-      <button className="w-32 h-12 rounded-lg bg-red-800 hover:bg-red-700 hover:scale-105 active:bg-red-800 active:scale-100 transition-all duration-300 cursor-pointer text-md font-semibold text-white">
+      <button className="w-32 h-12 rounded-lg bg-red-800 hover:bg-red-700 hover:scale-105 active:bg-red-800 active:scale-100 transition-all duration-300 cursor-pointer text-md font-semibold text-white" onClick={downloadQR}>
         Download
       </button>
     </div>
